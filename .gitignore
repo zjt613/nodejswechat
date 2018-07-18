@@ -1,2 +1,7 @@
 /tokenvalid/node_modules
 /tokenvalid/package-lock.json
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/nodejswechat.iml
+.idea/workspace.xml

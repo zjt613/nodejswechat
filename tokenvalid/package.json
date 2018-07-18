@@ -1,0 +1,15 @@
+{
+  "name": "tokenvalid",
+  "version": "1.0.0",
+  "description": "a example for wechat token valid with NodeJS",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Zheng JiangTao",
+  "license": "MIT",
+  "dependencies": {
+    "koa": "^2.5.2",
+    "sha1": "^1.1.1"
+  }
+}

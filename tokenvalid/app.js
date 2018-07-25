@@ -1,18 +1,37 @@
-'use strict'        //严格模式
+'use strict';        //严格模式
 //引入模块
 var Koa=require('koa');
 // var sha1=require('sha1');
-var gg=require('./wechat/g.js');
-
+var path=require('path');
+var wechat=require('./wechat/g.js');
+var util=require('./libs/util.js')
+var wechat_file=path.join(__dirname,'./config/wechat.txt');
 
 //初始化配置
+// var config={
+//     wechat:{
+//         appID:'your appID',
+//         appSecret:'your appsecret',
+//         token:'ataolanodejs'
+//     }
+// };
+
+//微信配置以及获取和更新配置的方法
 var config={
     wechat:{
-        appID:'your appID',
-        appsecret:'your appsecret',
-        token:'ataolanodejs'
+        appID:'wxd983ae093ea37a8c',
+        appSecret:'45578bdd330829a8bc0585b38ff054ac',
+        token:'ataolanodejs',
+        getAccessToken:function () {
+            return util.readFileAsync(wechat_file);
+        },
+        saveAccessToken:function (data) {
+            data=JSON.stringify(data);
+            return util.writeFileAsync(wechat_file,data);
+        }
     }
 };
+
 
 //创建Koa对象
 var app=new Koa();
@@ -37,7 +56,7 @@ var app=new Koa();
 //     }
 // });
 
-app.use(gg(config.wechat));
+app.use(wechat(config.wechat));
 
 app.listen(1234);
 console.log('Listening is on port 1234,please visit http://localhost:1234');

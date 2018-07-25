@@ -9,7 +9,9 @@
   "author": "Zheng JiangTao",
   "license": "MIT",
   "dependencies": {
+    "bluebird": "^3.5.1",
     "koa": "^2.5.2",
+    "request": "^2.87.0",
     "sha1": "^1.1.1"
   }
 }

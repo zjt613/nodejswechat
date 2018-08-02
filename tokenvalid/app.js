@@ -17,6 +17,7 @@ var wechat_file=path.join(__dirname,'./config/wechat.txt');
 // };
 
 //微信配置以及获取和更新配置的方法
+//这个json做配置文件就这点不好，不能写注释，这里一个appID、一个appSecret、一个token、还有一个获取AccessToken的方法，一个保存AccessToken方法
 var config={
     wechat:{
         appID:'wxd983ae093ea37a8c',

@@ -3,6 +3,7 @@
 var fs=require('fs');
 var Promise=require('bluebird');
 
+//暴露两个接口，一个readFileAsync,一个writeFileAsync
 exports.readFileAsync=function (fpath,encoding) {
     return new Promise(function(resolve,reject){
         fs.readFile(fpath,encoding,function(err,content){
